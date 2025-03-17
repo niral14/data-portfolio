@@ -1026,29 +1026,26 @@ body.loaded {
     }
 
     #image05 .frame {
-        max-width: 100%;
-        width: auto;
-        border-radius: 0.375rem;
-        border-color: #1C2120;
-        border-style: solid;
-        border-width: 1px;
-        transition: none;
-    }
+    max-width: 100%;
+    width: auto; /* Let it adapt dynamically */
+    border-radius: 0.375rem;
+    border: 1px solid #1C2120;
+    transition: none;
+    overflow: hidden; /* Prevents unwanted overflow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-    #image05 .frame img:first-child {
-        border-radius: calc(0.375rem - 1px) !important;
-    }
+#image05 .frame img {
+    width: 100%;
+    height: auto; /* Prevents stretching */
+    object-fit: cover; /* Change to 'contain' if needed */
+    object-position: center;
+    border-radius: calc(0.375rem - 1px) !important;
+    transition: none;
+}
 
-    #image05 img {
-        height: 100% !important;
-        object-fit: cover;
-        object-position: center;
-        width: 100% !important;
-    }
-
-    #image05 .frame img {
-        transition: none;
-    }
 
     #image13 .frame {
         width: 15rem;
@@ -5887,16 +5884,7 @@ body.loaded {
             width: 100vw;
         }
 
-        #image05 .frame {
-            width: 12rem;
-        }
-
-        #image05 img {
-            height: 100% !important;
-            object-fit: cover;
-            object-position: center;
-            width: 100% !important;
-        }
+       
 
         #image13 .frame {
             width: 12rem;
